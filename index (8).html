@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Decoder - Translate English To Morse code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+   <!-- Primary Meta Tags -->
+    <meta name="description" content="Translate English text to Morse code or decode Morse back to text with audio playback, visual representation, and adjustable speed. Perfect for learning and practicing Morse code.">
+    <meta name="keywords" content="morse code translator, morse code decoder, English To Morse code,  morse code generator, text to morse code, morse code to text, morse code converter, learn morse code">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://texttomorsecode.com/morse-code-decoder/">
+    <meta property="og:title" content="Morse Code Decoder - Translate English To Morse code">
+    <meta property="og:description" content="Free online tool to translate text to Morse code and decode Morse code to text with audio playback and visual representation.">
+    <meta property="og:image" content="https://texttomorsecode.com/morse-code-decoder/image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://texttomorsecode.com/">
+    <meta property="twitter:title" content="Morse Code Decoder - Translate English To Morse code">
+    <meta property="twitter:description" content="Free online tool to translate text to Morse code and decode Morse code to text with audio playback and visual representation.">
+    <meta property="twitter:image" content="https://texttomorsecode.com/morse-code-decoder/image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://texttomorsecode.com/morse-code-decoder/">
+    
+    <!-- Robots Meta Tag for Search Engine Control -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Morse Code Decoder",
+      "url": "https://texttomorsecode.com",
+      "description": "Free online tool to translate text to Morse code and decode Morse code to text with audio playback and visual representation.",
+      "applicationCategory": "MorsecodeApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Text to Morse code translation",
+        "Morse code decoding",
+        "Morse code To English",
+        "Conversion history",
+        "Mobile-friendly design"
+      ]
+    }
+    </script>
+    
+    <!-- CSS and Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <link rel="icon" sizes="512x512" href="icon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="https://texttomorsecode.com" class="logo">
+                <div class="logo-pulse"></div>
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="36" height="36">
+                        <path d="M3,12 h4 M10,12 h4 M17,12 h4" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M3,8 h11 M17,8 h4" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M3,16 h4 M10,16 h11" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-text-main">TexttoMorseCode</span>
+                    <span class="logo-text-tagline">Advanced Morse Code Decoder</span>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <a href="https://texttomorsecode.com" class="nav-item active">Translator</a>
+                <a href="https://texttomorsecode.com/about.html" class="nav-item">About Us</a>
+                 <a href="https://texttomorsecode.com/morse-code/" class="nav-item">Learn Morse Code</a>
+                <a href="https://texttomorsecode.com/contact.html" class="nav-item">Contact Us</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-container">
+        <div class="container">
+            <section class="converter-section">
+               <center> <h1>Morse Code Decoder</h1> 
+                <p>Translate Morse Code to english. Use our advanced translator to convert text to Morse code or decode Morse code back to text. Features audio playback, visual representation, and more. We also offer an input keyboard to type the Morse Code and also allow you to decode the previously generated Morse code to text or English in real time. You can also view below the reference section with the morse code. You can also play Morse Code as audio and adjust Speed to get the desired results. </p>
+               </center> 
+                <div class="grid grid-2">
+                    <!-- Text to Morse Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="feature-icon" style="width: 40px; height: 40px;">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <h3 class="card-title">Text to Morse</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <label for="text-input" class="input-label">Enter your text</label>
+                                <textarea id="text-input" placeholder="Type your text here..."></textarea>
+                                <div class="actions">
+                                    <button id="convert-to-morse" class="btn btn-primary">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        Convert
+                                    </button>
+                                    <button id="clear-text" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                        Clear
+                                    </button>
+                                    <button id="copy-morse" class="btn btn-outline">
+                                        <i class="fas fa-copy"></i>
+                                        Copy Morse
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="visual-morse" id="visual-morse"></div>
+                            
+                            <div class="slider-container">
+                                <label for="wpm-speed" class="slider-label">Speed:</label>
+                                <input type="range" min="5" max="30" value="15" class="slider" id="wpm-speed">
+                                <span id="wpm-value" class="slider-value">15 WPM</span>
+                            </div>
+                            
+                            <div class="actions">
+                                <button id="play-morse" class="btn btn-secondary">
+                                    <i class="fas fa-play"></i>
+                                    Play
+                                </button>
+                                <button id="stop-morse" class="btn btn-warning">
+                                    <i class="fas fa-stop"></i>
+                                    Stop
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Morse to Text Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="feature-icon" style="width: 40px; height: 40px;">
+                                <i class="fas fa-signal"></i>
+                            </div>
+                            <h3 class="card-title">Morse to Text</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <label for="morse-input" class="input-label">Enter Morse code</label>
+                                <textarea id="morse-input" placeholder="Type Morse code here... (use . for dots, - or _ for dashes, space between letters, / between words)"></textarea>
+                                <div class="actions">
+                                    <button id="convert-to-text" class="btn btn-primary">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        Convert
+                                    </button>
+                                    <button id="clear-morse" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                        Clear
+                                    </button>
+                                    <button id="copy-text" class="btn btn-outline">
+                                        <i class="fas fa-copy"></i>
+                                        Copy Text
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="morse-tools">
+                                <label class="input-label">Morse Code Input Tools</label>
+                                <div class="actions">
+                                    <button class="btn btn-outline morse-btn" data-value=".">.</button>
+                                    <button class="btn btn-outline morse-btn" data-value="-">-</button>
+                                    <button class="btn btn-outline morse-btn" data-value=" ">Space</button>
+                                    <button class="btn btn-outline morse-btn" data-value="/">/</button>
+                                    <button class="btn btn-outline" id="morse-listen">
+                                        <i class="fas fa-headphones"></i>
+                                        Listen Mode
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- History Section -->
+            <section class="history-section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="feature-icon" style="width: 40px; height: 40px;">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 class="card-title">Conversion History</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="history-list" id="history-list">
+                            <!-- History items will be added here by JavaScript -->
+                            <div class="history-item">
+                                <div class="history-text">
+                                    <strong>Text:</strong> HELLO WORLD
+                                    <br>
+                                    <strong>Morse:</strong> .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+                                </div>
+                                <div class="history-actions">
+                                    <button class="btn btn-outline btn-sm history-use">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm history-delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2>Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-title">Real-time Conversion</div>
+                        <p>Convert between Morse code and text as you type with instant feedback.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <div class="feature-title">Audio Playback</div>
+                        <p>Hear your Morse code with adjustable speed and pitch.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="feature-title">Visual Representation</div>
+                        <p>See dots and dashes visualized for easier learning and understanding.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="feature-title">Listen Mode</div>
+                        <p>Use your microphone to input Morse code with taps or clicks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="feature-title">Conversion History</div>
+                        <p>Keep track of your recent conversions for quick reference.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-title">Responsive Design</div>
+                        <p>Works perfectly on desktop, tablet, and mobile devices.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Reference Section -->
+            <section class="reference-section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="feature-icon" style="width: 40px; height: 40px;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="card-title">Morse Code Reference</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="reference-grid" id="reference-grid">
+                            <!-- Reference items will be added here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M3,12 h4 M10,12 h4 M17,12 h4" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M3,8 h11 M17,8 h4" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M3,16 h4 M10,16 h11" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="footer-logo-text">TexttoMorseCode</span>
+                </div>
+                <p class="footer-tagline">Making Morse code accessible for everyone. Our mission is to preserve and promote this historic communication method in a modern digital format.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="/learn"><i class="fas fa-book-reader"></i> Learning Guide</a></li>
+                    <li><a href="/practice"><i class="fas fa-gamepad"></i> Practice Game</a></li>
+                    <li><a href="/reference"><i class="fas fa-clipboard-list"></i> Code Reference</a></li>
+                    <li><a href="/blog"><i class="fas fa-blog"></i> Morse Code Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="/contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="/privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TexttoMorseCode. All rights reserved.</p>
+            <p>Made with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for Morse code enthusiasts worldwide</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+<script src="script.js">    </script>
+</body>
+</html>
